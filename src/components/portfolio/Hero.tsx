@@ -6,7 +6,9 @@ import {
   useTransform,
 } from "framer-motion";
 import { ArrowDown, Github, Instagram, Linkedin, Mail } from "lucide-react";
-import profile from "@/assets/profile-placeholder.jpg";
+import profileAsset from "@/assets/profile.jpg.asset.json";
+
+const profile = profileAsset.url;
 
 const socials = [
   { icon: Linkedin, href: "#", label: "LinkedIn" },
@@ -132,7 +134,7 @@ export function Hero() {
             <img
               src={profile}
               alt="Yassine Yousfi"
-              className="relative h-64 w-64 rounded-full border-2 border-border object-cover brightness-[1.35] contrast-[1.05] md:h-80 md:w-80"
+              className="relative h-64 w-64 rounded-full border-2 border-border object-cover md:h-80 md:w-80"
             />
             <div className="absolute -right-2 top-6 h-3 w-3 animate-pulse rounded-full bg-primary glow-primary" />
           </motion.div>
